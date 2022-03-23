@@ -127,3 +127,14 @@ console.log(baldai)
 */
 //naudoti Array funkcijoms atlikti
 //https://www.w3schools.com/jsref/jsref_obj_array.asp
+// concat
+// includes
+// indexof
+// reverse
+// slice
+// splice
+// sort -mdn sorting by UTF
+
+// Stringu ir Array metodu apjungimas
+// Sveiki -> ikievS
+

@@ -138,3 +138,184 @@ console.log(baldai)
 // Stringu ir Array metodu apjungimas
 // Sveiki -> ikievS
 
+// -------- Nested Arrays ---------
+/*
+const nestedArr = [
+    ['X', null, '0'],
+    ['0', null, 'X'],
+    ['0','X', null]
+]
+//norint pasiimt pirma eilute
+console.log(nestedArr[0])
+//jei is pirmos eilutes norim x pasiimt tai rasom
+console.log(nestedArr[0][0])
+*/
+
+
+//----- Objects -----------
+
+// Key value pairs
+// key kaire puse, value desine
+/* 
+name: 'Jonas';
+age: 21;
+*/
+//css stiliai yra kazkas panasaus i objekta
+/*
+body {
+    color: red;
+}
+*/
+//object literal
+/*
+const saldytuvas = {
+    morkos: 3,
+    kiausiniai: 12,
+    sviestas: 0.5,
+    vynuoges: 'nemazai',
+    darzoves: ['morkos','pomidoras','salieras','cukinija']
+}
+*/
+//dar pvz kaip galima apsirasyti platesni Array
+/*
+const duonbaze = [{}, {}, {}, {}, {}]
+*/
+// tvarka objekte nesvarbi
+// kaip pasiekti reikiamas reiksmes
+// pvz is ankstesnio apsirasymo su saldytuvu
+/*
+saldytuvas['morkos']
+//arba galima paprasciau
+saldytuvas.darzoves
+//jei norim dar giliau
+saldytuvas.darzoves[2]
+*/
+//ats bus 3, ir t.t. su kitais jei norim koki tai atsakyma isgaut
+
+// ["name"] or .name
+// visos key value objekte yra konvertuojamos is string
+/*
+const apdovanojimai =
+{
+    'pirma vieta': 'JAV',
+    2: 'UK',
+    3: 'BR'
+}
+apdovanojimai[1]
+apdovanojimai['1']
+//kaip prideti nauja reiksme
+apdovanojimai['4'] = 'Lietuva';
+//kaip perrasyti
+apdovanojimai['2'] = 'GB'
+//arba jei su ankstesniu pvz tai butu
+saldytuvas.vynuoges = 'nebera'
+*/
+//cia viskas veikia kaip ir su masyvais
+
+//<<<<<<< uzduotis >>>>>>>>
+//susikurti objekta dienos pietus
+//ingredientai
+//kaina
+//ivertinimas
+//vieta kur valgete
+//ar rekomenduotumete kitiems
+/*
+    sriub = {
+        pavadinimas: 'sriuba',
+        ingredientai: ['barsciai','bulves','svogunai','lasinukai'],
+        kaina: 2.5,
+        ivertinimas: 4.5,
+        vieta: 'Kaunas',
+        rekomendacija: true
+    }
+    cep = {
+        pavadinimas: 'cepelinai',
+        ingredientai: ['bulves','svogunai','lasinukai','farsas'],
+        kaina: 3.5,
+        ivertinimas: 4.7,
+        vieta: 'Karmelava',
+        rekomendacija: true
+    }
+    sasl = {
+        pavadinimas: 'saslykai',
+        ingredientai: ['mesa','svogunai','ryziai','darzoves'],
+        kaina: 3,
+        ivertinimas: 4.8,
+        vieta: 'Akademija',
+        rekomendacija: true
+    }
+    kebab = {
+        pavadinimas: 'kebabai',
+        ingredientai: ['mesa','darzoves','blynas','padazas'],
+        kaina: 2.5,
+        ivertinimas: 3,
+        vieta: 'Slabotke',
+        rekomendacija: false
+    }
+
+
+
+//pasinaudokite sukurtu objektu ir jo reiksmemis
+//iveskite i console visa info apie pietus
+//siandiena valgiau...
+
+const ManoPietus = [sriub, cep, sasl, kebab]
+console.log(ManoPietus)
+console.table(ManoPietus)
+kaValgiau = `siandiena valgiau ${ManoPietus[2].pavadinimas}`
+console.log(kaValgiau)
+*/
+
+//Array of object - how would we access values?
+//JSON placeholder data
+
+//------------ FOR LOOPS -----------------//
+// kur naudojami, kaip pvz Youtube video tipai ir kazkas pan.
+
+//nurodome, kad tai loop su for
+//nurodome, kad naudosime kintamaji ir gali buti bet kokia raide
+//nurodome nuo kokios reiksmes ji prasideda ir 
+//kokia reiksme ji pasibaigia
+// i ++ rodo, kad galiausiai i reiksme yra padidinama vienetu
+// i = 1, ar 1 <= 10? jei taip i++ ir atliekame veiksma
+/*
+for (let i = 1; i <= 10; i++) {
+    console.log(i)
+}
+*/
+//SVARBU gerai apsirasyti salygas, kad nesukurti begalinio ciklo
+//for (let i = 1; i > 0; i++) {
+//    console.log('Narsyklei nepatiks :DDD')
+//}
+
+//<<< Uzduotis >>>
+// parasyti Loop kuris prades grazinti skaicius nuo
+// 20 ir is skaiciaus atims 4 kiekvieno ciklo metu
+// paskutinis isvestas i konsole skaicius turi buti 0
+/*
+for (let i = 20; i >= 0; i=i-4){
+    console.log(i)
+}
+*/
+//<<< uzduotis >>>
+//parasyti Loop'a kuris isspausdins i konsole
+//visus lyginius skaicius nuo 1 iki 17
+// yra keli galimi budai
+/*
+const skaiciai = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+
+for (let i = 0; i <= skaiciai.length -1; i++){
+    if(skaiciai[i] % 2 === 0){
+        console.log(skaiciai[i])
+    }
+}
+
+//tinka ir 
+for (let i = 0; i < skaiciai.length; i++){
+    if(skaiciai[i] % 2 === 0){
+        console.log(skaiciai[i])
+    }
+}
+*/
+
+//baigiau ziuret 5sav 2d, 1:44:46;

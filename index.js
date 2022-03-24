@@ -317,5 +317,47 @@ for (let i = 0; i < skaiciai.length; i++){
     }
 }
 */
+//jei reik nelyginiu skaiciu tada keiciasi minimaliai
+/*
+const skaiciai = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+for (let i = 0; i < skaiciai.length; i++){
+    if(skaiciai[i] % 2 === 1){
+        console.log(skaiciai[i])
+    }
+}
+*/
 
-//baigiau ziuret 5sav 2d, 1:44:46;
+// Looping trough arrays
+/*
+const myArr = ['One', 'Two','Sofa','Stalas','test']
+//why i have to be less then myArr.length?
+for (let i = 0; i < myArr.length; i++) {
+    console.log(myArr[i])
+}
+*/
+//tai cia svarbu jog teisingai apsirasytume i reiksmes,
+//nes siuo atveju negalim naudot i<=myArr.lengh,kadangi ismes
+//undefined, nebent dar darasytume i <= myArr.lengh -1
+
+//<<<  uzduotis >>>
+//Kaip isvesti visas reiksmes i console
+//Tik pradedant nuo paskutines
+/*
+const myArr = ['One', 'Two','Sofa','Stalas','test']
+for (let i = myArr.length -1; i >=0; i-- ) {
+    console.log(myArr[i])
+}
+*/
+
+//<<< uzduotis >>>
+//kaip pereiti per visa Array ir isvesti i console skaicius kurie didesni uz 8?
+/*
+const skaiciai = [0, 5, 29, 23, 4, 5, 2, 5, 24, 89, 6, 5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16];
+const daugiauNeiAstuoni = [];
+for (let i = 0; i < skaiciai.length; i++) {
+    if(skaiciai[i] > 8) {
+        daugiauNeiAstuoni.push(skaiciai[i])
+    }
+}
+console.log(daugiauNeiAstuoni)
+*/

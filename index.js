@@ -477,3 +477,21 @@ while(vartotojoIvestaKomanda !== 'quit') {
 }
 */
 
+// ----------- Funkcijos --------------
+
+let skaicius = 5;
+// function definition
+function doSomething(skaicius) { //arguments goes here ()
+    if (skaicius > 5) {
+
+    }
+    return 'Something'
+}
+
+// console.log(doSomething)
+//let atsakymas = doSomething()
+// kodel nieks nepadaryta? :)
+
+// uzduotis yra funkcijos parametras
+
+//baigiau ziuret ties 51min 16sek

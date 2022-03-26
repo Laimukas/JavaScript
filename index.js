@@ -243,6 +243,7 @@ saldytuvas.vynuoges = 'nebera'
         vieta: 'Slabotke',
         rekomendacija: false
     }
+
 const ManoPietus = [sriub, cep, sasl, kebab]
 console.log(ManoPietus)
 console.table(ManoPietus)
@@ -441,7 +442,9 @@ const todoList = ['Pradeti nuo q komandos',
   'panaudoti prompt, kad gauti duomenis', 
   'panaudoti simbolius ir console atskirti vienai uzduociai nuo kitos'
   ];
+
 let vartotojoIvestaKomanda = prompt('Kokia yra jusu sekanti komanda')
+
 while(vartotojoIvestaKomanda !== 'quit') {
   if (vartotojoIvestaKomanda === 'new') {
     let naujasDarbas = prompt('Iveskite nauja darba i darbu sarasa');
@@ -698,7 +701,9 @@ function getMidSymbol(text){
   if(text.length % 2 === 0){
       return `${text[midIndex -1]}${text[midIndex]}`;
   }
+  capitalize('hkweki mwewqwy name iqweqws weqpw i o')
   
+<<<<<<< HEAD
   return text[midIndex];
 }
 
@@ -851,4 +856,5 @@ plotas: function(length){
 }
 }
 kvadrato.plotas(10);
-kvadrato.perimetras(10)*/
+kvadrato.perimetras(10)
+*/

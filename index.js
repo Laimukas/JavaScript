@@ -478,7 +478,7 @@ while(vartotojoIvestaKomanda !== 'quit') {
 */
 
 // ----------- Funkcijos --------------
-
+/*
 let skaicius = 5;
 // function definition
 function doSomething(skaicius) { //arguments goes here ()
@@ -487,11 +487,183 @@ function doSomething(skaicius) { //arguments goes here ()
     }
     return 'Something'
 }
-
+*/
 // console.log(doSomething)
 //let atsakymas = doSomething()
 // kodel nieks nepadaryta? :)
 
 // uzduotis yra funkcijos parametras
+/*
+function padaryk(uzduotis){ // parametras yra reiksme kuria funkcija priima
+    console.log(`Pradedu daryti ${uzduotis}`)
+}
 
-//baigiau ziuret ties 51min 16sek
+padaryk('darbus') // cia darbus jau yra argumentas
+*/
+// argumentas yra tai ka perduodame funkcijai
+/*
+function pakartok(num, fraze){
+    for (let i = 0; i < num; i++){
+        console.log(fraze)
+    }
+}
+pakartok(5, 'Sveiki zmones!')
+//kas bus jei darysime taip
+pakartok('Sveiki zmones', 5)
+*/
+//esme: kokia tvarka nurodom kintamuosius,
+//tokia tvarka ir turime juos apsirasyt
+/*
+function sudek(pirmasSkaicius, antrasSkaicius){
+    //return naudojame kai norime grazint reiksme is funkcijos
+    //console.log tiesiog atspausdina reiksme taciau mes negalime jos niekur naudoti
+    //nes reiksme nera issaugoma
+    return pirmasSkaicius + antrasSkaicius
+    //return sustabdo tolimesni funkcijos vykdyma
+    console.log('Sitas kodas niekada neivykdys')
+    //cia nieko neprintins nes consola iraseme po return
+}
+console.log(sudek(1, 2))
+*/
+//<<< uzduotis >>>
+//parasyt funkcija kuri du duotus skaicius panaudoja uzduociai
+//pirma skaiciu kelia antro skaiciaus laipsniu
+/*
+function duSkaiciai(skaicius, laipsnis){
+    console.log(skaicius ** laipsnis);
+}
+duSkaiciai(5, 3)
+*/
+//tas ir gerumas jog funkcija naudojant nereik apsirasinet kazkaip
+//kintamuju, juos kaip siam pvz apsirasom paprastai
+
+//<<< uzduotis >>>
+//funkcija priima du skaicius
+//ir atprintina didesni is ju
+/*
+function didesnisSkaicius(a,b){
+ if (a > b){
+     console.log('didesnis skaicius yra ',a)
+ } else if (a < b) {
+    console.log('didesnis skaicius yra ',b)
+ } else{
+     console.log('skaiciai lygus')
+ } 
+}
+didesnisSkaicius(7,2)
+*/
+//<<< uzduotis >>>
+//parasyti funkcija kuri ivedus skaiciu parasys kokia tai diena
+//kaip pvz jei 1 tai pirmadienis,jei 2 tai antradienis ir t.t.
+/*
+function savaitesDiena(a){
+    if (a == 1)
+    console.log('dabar pirmadienis')
+    else if (a == 2)
+    console.log('dabar yra antradienis')
+    else if (a == 3)
+    console.log('dabar yra treciadienis')
+    else if (a == 4)
+    console.log('dabar yra ketvirtadienis')
+    else if (a == 5)
+    console.log('dabar yra penktadienis')
+    else if (a == 6)
+    console.log('dabar yra sestadienis')
+    else if (a == 7)
+    console.log('dabar yra sekmadienis')
+    else
+    console.log('savaiteje tokios dienos nera')
+}
+savaitesDiena(7)
+*/
+//<<< uzduotis >>>
+// susumuoti visus skaicius masyve.
+/*
+const sudetiVisusSkaicius = [12, 2, 16, 3, 8, 9, 'hi', 12, 2, 1, 5, 3, 9, 55, 292, 13, undefined]
+console.log(sudetiVisusSkaicius)
+function sudetiVisusMasyvoSkaicius(arr) { //arr yra arejaus sutrumpinimas
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if(Number.isInteger(arr[i])) {//tikrinam ar kazkuris elementas yra skaicius
+      sum = sum + arr[i]
+    }
+  }
+  console.log(sum)
+}
+sudetiVisusMasyvoSkaicius(sudetiVisusSkaicius)
+*/
+
+//<<< uzduotis >>>
+//parasyti funkcija kuri turetu startini ir galini skaiciu
+//musu atveju naudosime skaicius 0 ir 100
+//susikurti masyva su skaiciais nuo 0 iki 100 nerasant viso masyvo ranka
+//ties kiekvienu skaiciu tegu tikrina ar jis yra
+//3 kartotinis ir kad ji atspausdintu
+//ta pati padaryti su 5 kartotiniais
+//jei skaicius dalinasi is 3 ir is 5 be liekanos
+//'Sis skaicius yra - triju ir penkiu kartotinis'
+//galiausiai i konsole isvesti tris masyvus kuriuose bus
+//triju,penkiu bei triju su penkiais kartotiniai
+/*
+function kartotiniai(startinisSkaicius, galinisSkaicius){
+    // const skaiciai = Array.from(Array(100).keys());
+    const skaiciai = [];  
+    const trijuKartotiniai = [];
+    const penkiuKartotiniai = [];
+    const trijuIrPenkiuKartotiniai = [];
+    for (let i = startinisSkaicius; i <= galinisSkaicius; i++){
+      skaiciai.push(i)
+    }
+    console.log('skaiciai', skaiciai)
+   
+  
+    for (let i = 0; i < skaiciai.length; i++) {
+      if (skaiciai[i] % 3 === 0 && skaiciai[i] % 5 === 0) {
+        trijuIrPenkiuKartotiniai.push(skaiciai[i])
+        // trijuKartotiniai.push(skaiciai[i]);
+        // penkiuKartotiniai.push(skaiciai[i]);
+      } else if (skaiciai[i] % 3 === 0) {
+        trijuKartotiniai.push(skaiciai[i]);
+      } else if (skaiciai[i] % 5 === 0) {
+        penkiuKartotiniai.push(skaiciai[i]);
+      } 
+    }
+    console.log('triju', trijuKartotiniai)
+    console.log('penkiu', penkiuKartotiniai)
+    console.log('bendri', trijuIrPenkiuKartotiniai)
+  }
+  kartotiniai(0, 100)
+  */
+
+  //<<< Uzduotis >>>
+  //Parasyti funkcija kuri priima Stringa
+  //ir grazina ta pati stringa su pirma ir paskutine raide didziosiomis
+  //gali buti vienas zodis, gali buti keli
+  //pradziai padarykite kad tik stringo pirma ir paskutine raide padidina
+  //Bonus uzduotis - papildyti funkcija,kad pakeistu visu zodziu stringe pirmas ir paskutines raides
+/*
+  function capitalize(str) {
+    const arrayFromString = str.split(' ');
+    const newArr = []
+    console.log('Turimas textas:', arrayFromString)
+    for (let i = 0; i < arrayFromString.length; i++) {
+      let ilgisMinusVienas = arrayFromString[i].length - 1;
+      if(arrayFromString[i].length === 1) {
+        newArr.push(arrayFromString[i][0].toUpperCase());
+        
+      } else {
+        let capitalizedString = arrayFromString[i][0].toUpperCase() +
+        arrayFromString[i].slice(1, arrayFromString[i].length -2) + 
+        arrayFromString[i][ilgisMinusVienas].toUpperCase()
+       newArr.push(capitalizedString)
+       
+       console.log('Padidinus pirma ir galine raides gaunasi:', capitalizedString)
+      }
+    }
+  }
+  
+  capitalize('hkweki mwewqwy name iqweqws weqpw i o')
+  
+  */
+
+  

@@ -252,9 +252,7 @@ saldytuvas.vynuoges = 'nebera'
         vieta: 'Slabotke',
         rekomendacija: false
     }
-//pasinaudokite sukurtu objektu ir jo reiksmemis
-//iveskite i console visa info apie pietus
-//siandiena valgiau...
+
 const ManoPietus = [sriub, cep, sasl, kebab]
 console.log(ManoPietus)
 console.table(ManoPietus)
@@ -299,11 +297,13 @@ for (let i = 20; i >= 0; i=i-4){
 // yra keli galimi budai
 /*
 const skaiciai = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+
 for (let i = 0; i <= skaiciai.length -1; i++){
     if(skaiciai[i] % 2 === 0){
         console.log(skaiciai[i])
     }
 }
+
 //tinka ir 
 for (let i = 0; i < skaiciai.length; i++){
     if(skaiciai[i] % 2 === 0){
@@ -452,7 +452,9 @@ const todoList = ['Pradeti nuo q komandos',
   'panaudoti prompt, kad gauti duomenis', 
   'panaudoti simbolius ir console atskirti vienai uzduociai nuo kitos'
   ];
+
 let vartotojoIvestaKomanda = prompt('Kokia yra jusu sekanti komanda')
+
 while(vartotojoIvestaKomanda !== 'quit') {
   if (vartotojoIvestaKomanda === 'new') {
     let naujasDarbas = prompt('Iveskite nauja darba i darbu sarasa');
@@ -476,6 +478,7 @@ while(vartotojoIvestaKomanda !== 'quit') {
   }
 }
 */
+
 
 // ----------- Funkcijos --------------
 /*
@@ -665,5 +668,3 @@ function kartotiniai(startinisSkaicius, galinisSkaicius){
   capitalize('hkweki mwewqwy name iqweqws weqpw i o')
   
   */
-
-  

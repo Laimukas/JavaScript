@@ -292,6 +292,7 @@ for (let i = 0; i <= skaiciai.length -1; i++){
         console.log(skaiciai[i])
     }
 }
+
 //tinka ir 
 for (let i = 0; i < skaiciai.length; i++){
     if(skaiciai[i] % 2 === 0){
@@ -649,6 +650,5 @@ function kartotiniai(startinisSkaicius, galinisSkaicius){
     }
   }
   
-  capitalize('hkweki mwewqwy name iqweqws weqpw i o')
-  
-  */
+  capitalize('hkweki mwewqwy name iqweqws weqpw i o')  */
+  //

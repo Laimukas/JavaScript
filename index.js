@@ -3,7 +3,6 @@ console.log('Hello People')
 /*
 let skaicius = 5
 let kitasSkaicius = 7
-
 kubas = skaicius ** 3
 console.log(kubas)
 */
@@ -14,7 +13,6 @@ let gimimoMetai = 1982;
 let dabartiniaiMetai = 2022;
 //let atsakymas = vardas + " " + surname + " yra " + (dabartiniaiMetai - gimimoMetai) + " metu"
 //arba kitas varijantas
-
 let atsakymas = `${vardas} ${surname} - jam yra ${dabartiniaiMetai - gimimoMetai} metu`
 console.log(atsakymas);
 console.log(atsakymas.length);
@@ -32,8 +30,6 @@ console.log(kitasVardas.charAt(0));
 // -----------if panaudojimas --------------
 /*
 let data = 2;
-
-
 if (data < 2){
     console.log(true)
 } else if ( 2 < data ){
@@ -56,10 +52,8 @@ if (data < 2){
 //arbatpinigiu dydi, ir pradine saskaita
 /*
 let ivestaSuma = parseInt(prompt('Jusu moketina suma yra:'))
-
 let arbatpinigiai = 0;
 let galutinesuma;
-
 if (ivestaSuma <= 20) {
   arbatpinigiai = ivestaSuma  * 0.1;
 } else if ( 20 < ivestaSuma && ivestaSuma <= 50) {
@@ -71,13 +65,11 @@ galutinesuma = `Visa sumoketa suma ${ivestaSuma + arbatpinigiai}
  arbatpinigiai yra ${arbatpinigiai} saskaita buvo ${ivestaSuma}
 `
 console.log(galutinesuma)
-
 */
 
 //---------- switch naudojimas -----------------
 /*
 let number = parseInt(prompt('enter the number'));
-
 switch(number) {
     case 1:
         console.log('print 1')
@@ -122,7 +114,6 @@ console.log(mixedValue[6])
 const baldai = ['lempa','lentynos','sofa','stalas']
 baldai.splice(0,1,"Spintele")
 baldai.splice(3,1,"Kede")
-
 console.log(baldai)
 */
 //naudoti Array funkcijoms atlikti
@@ -297,7 +288,6 @@ for (let i = 20; i >= 0; i=i-4){
 // yra keli galimi budai
 /*
 const skaiciai = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
-
 for (let i = 0; i <= skaiciai.length -1; i++){
     if(skaiciai[i] % 2 === 0){
         console.log(skaiciai[i])
@@ -486,7 +476,6 @@ let skaicius = 5;
 // function definition
 function doSomething(skaicius) { //arguments goes here ()
     if (skaicius > 5) {
-
     }
     return 'Something'
 }
@@ -500,7 +489,6 @@ function doSomething(skaicius) { //arguments goes here ()
 function padaryk(uzduotis){ // parametras yra reiksme kuria funkcija priima
     console.log(`Pradedu daryti ${uzduotis}`)
 }
-
 padaryk('darbus') // cia darbus jau yra argumentas
 */
 // argumentas yra tai ka perduodame funkcijai
@@ -664,7 +652,7 @@ function kartotiniai(startinisSkaicius, galinisSkaicius){
       }
     }
   }
-  
   capitalize('hkweki mwewqwy name iqweqws weqpw i o')
   
   */
+

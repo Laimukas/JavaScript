@@ -641,18 +641,220 @@ function kartotiniai(startinisSkaicius, galinisSkaicius){
       let ilgisMinusVienas = arrayFromString[i].length - 1;
       if(arrayFromString[i].length === 1) {
         newArr.push(arrayFromString[i][0].toUpperCase());
-        
-      } else {
+      } 
+      else {
         let capitalizedString = arrayFromString[i][0].toUpperCase() +
         arrayFromString[i].slice(1, arrayFromString[i].length -2) + 
         arrayFromString[i][ilgisMinusVienas].toUpperCase()
-       newArr.push(capitalizedString)
-       
+       newArr.push(capitalizedString);       
        console.log('Padidinus pirma ir galine raides gaunasi:', capitalizedString)
       }
     }
+  }  
+  capitalize('hkweki mwewqwy name iqweqws weqpw i o')  
+*/
+
+//<<< uzduotis >>>
+// Parasyti funkcija kuri surusiuos skaicius esancius masyve nuo didziausio iki maziausio
+/*const randomNumbers = [1, 22, 543, 2, 6, 12, 55, 86, 6, 9, 12, 31, 51, 92, 3]
+// isvesti nauja masyva i console
+function sortNumbersHighToLow(arr){
+  console.log(arr.sort(function(a, b){return a-b}))
+}
+sortNumbersHighToLow(randomNumbers)
+*/
+
+//<<< uzduotis >>>
+// Parasyti funkcija kuri suras vidurini zenkla Stringe ir isves ji i console
+// jei stringe yra nelyginis simboliu skaicius, isvedame vidurini simboli
+// jei lyginis, du vidurinius
+/*
+function grazinkViduriniSimboli(str){
+  if (str.length % 2 === 0) { // lengt = 8
+   // lyginis - 1 = nelyginis 
+   // pirmas sprendimo budas
+   
+    let index = Math.floor((str.length - 1) / 2); // susirasti pirmo vidurinio stringo indexa
+    console.log(str.slice(index, index + 2)) // pridedu 2 nes slice, neitraukia end indexo, todel + 1 netinka
+     // gaunasi kad cia yra slice(1, 1 + 2)
+     
+     // antras sprendimo budas
+    console.log(str.slice(str.length/2-1, str.length/2+1)); 
+ } else {
+   ///         [ T e s s i ] .length() - grazins 5
+   ///         [ 0 1 2 3 4 ]
+   let index = (str.length - 1) / 2;
+   console.log(index); 
+   console.log(str[index]) // str[2]
+   }
+ }
+ 
+ grazinkViduriniSimboli('Tessi')
+ */
+//dar vienas varijantas
+/*
+function getMidSymbol(text){
+
+  let midIndex = parseInt(text.length / 2);
+  console.log(midIndex);
+
+  if(text.length % 2 === 0){
+      return `${text[midIndex -1]}${text[midIndex]}`;
   }
   capitalize('hkweki mwewqwy name iqweqws weqpw i o')
   
-  */
+<<<<<<< HEAD
+  return text[midIndex];
+}
 
+console.log(getMidSymbol("besikiskiakopusteliaudamasis"));
+*/
+
+// ---------- Function scope -------------
+// jis nurodo / nusako kur yra pasiekiami kintamieji, kur juos galime naudoti
+ /*console.log(secretNumber)
+
+ let secretNumber = 12;*/
+ // esmeje tas apsirasymas turi but paeiliui,siuo atveju nieko neisspausdins
+ //nes console.log anksciau aprasytas nei kintamasis
+
+//------------- Block scope ----------------
+/*let num = 111;
+if (num > 100){
+  let kitasSkaicius = 100;
+  let darKitas = 12;
+}
+console.log(kitasSkaicius)
+console.log(num)*/
+//kadangi aprasymas yra viduje,tai ir atsakymas ten turetu but aprasytas, o db
+//nieko nemeta,nes atsakymas isorej aprasytas
+
+/*
+let kintamasis = 'kinta';
+for (let i = 20; i < 25; i++) {
+  let j = 'pastovus';
+  if(i > 20) {
+    console.log(i)
+    console.log(kintamasis)
+    console.log(j)
+  }
+}
+console.log(i)
+console.log(j)
+//tikrinam kuriuos matys (spausdins),kurie uz borto liks :)
+*/
+/*
+for (let i = 20; i < 25; i++) {
+  console.log(i)
+}
+console.log(i)
+*/
+//paprastas pvz patikrint kur veiktu atsakymo aprasymas
+
+//---------- Lexical scope ----------------------
+
+// function in function - accessing variables
+// kintamieji gali buti pasiekiami teviniuose blokuose
+// bet tevinis blokas, negali pasiekti child bloko kintamuju
+
+//------------ Function expressions --------------
+/*
+const functionExpression = function() {
+  return 34 + 231
+}
+// issaugome funkcija be jokio pavadinimo ir priskiriame ja kintamajam
+console.log(functionExpression())
+*/
+//<<< uzduotis >>>
+//susikurti funkcija, kuri grazins true arba false priklausimai nuo to
+// ar skaicius yra septyniu kartotinis ar ne,naudoti function expression
+/*
+const septyniuKartotinis = function(num) {
+  if (num %7 === 0){
+    console.log(true)
+  } else {
+    console.log(false)
+  }
+}
+septyniuKartotinis(48)*/
+
+//---------- Higher order functions --------------
+// functions that returns functions
+// or functions that uses other functions
+/*
+function addTen(func, num){
+  console.log(func);
+  console.log(num, 'num')
+  //musu atveju gaunasi, kad sita vieta yra
+  console.log(func(num))
+  // konvertuojama i pridesiuDesimt(11)
+}
+function pridesiuDesimt(num){
+  console.log('pridesiuDesimt funkcija gauna skaiciu', num)
+  return 10 + num
+}
+// galiausiai gaunasi addTen(20, 11)
+// addTen(pridesiuDesimt(10), 11)
+addTen(pridesiuDesimt, 11)
+*/
+/*
+function viesaFunkcija(){
+  return function getData() {
+    console.log('Slapat info')
+  }
+}
+let slaptaInfo = viesaFunkcija();
+console.log(slaptaInfo)
+slaptaInfo()*/
+/*
+function viesaFunkcija(){
+ function getData() {
+    console.log('Slapat info')
+  }
+  getData()
+}
+
+viesaFunkcija()*/
+
+//------------ Methods - functions inside the objects -----------------
+
+//cia sena sintakse aprasytas metodas
+/*
+const oldSyntax = {
+  gyvunai: ['suo', 'kate', 'liutas'],
+  atspausdink: function() {
+    console.log(10)
+  }
+}
+
+//console.log(oldSyntax['gyvunai'])
+console.log(oldSyntax.gyvunai) //galima tiesiog ir sitaip naudot
+console.log(oldSyntax.atspausdink()) //be skliaustu vel nieko nerodytu
+*/
+//o cia nauja sintakse aprasytas metodas
+/*
+const newSyntax = {
+  atspausdink() {
+    console.log(20)
+  }
+}
+newSyntax.atspausdink()*/
+
+//<<< uzduotis >>>
+
+// uzduotis suskikurti objekta kvadrato
+// sukurti du metodus (plotas ir perimetras) kurie priims krastines ilgi
+// kvadrato.plotas(10)  - grazins 100
+// kvadrato.perimetras(10) - 40
+/*
+const kvadrato = {
+plotas: function(length){
+  console.log(length ** 2)
+},
+ perimetras: function(length) {
+  console.log(length * 4)
+}
+}
+kvadrato.plotas(10);
+kvadrato.perimetras(10)
+*/

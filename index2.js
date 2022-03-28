@@ -721,4 +721,153 @@ function createSingleCard(arr) {
   createSingleCard(duomenysIsDB)
   */
 
-// 6 sav 3 diena 1:53:33 sustojau
+  //----------------- Event ---------------------------
+
+  // ju yra ivairiu rusiu ir jie dazniausiai naudojami mygtuku paspaudimui
+  // inline onClick event on button pavyzdys html
+  // onclick - https://www.w3schools.com/jsref/event_onclick.asp
+  //pvz
+// sita isirasom i html
+//<button onclick="alert('I was pressed')">Press me</button>
+//<button id="second-btn"></button>
+
+//su situ koreguojam per js
+// cia kaip pastebesit nebutinai ant mygtuko paspaudus bus padaryti pakeitimai
+//galima ir ant kito kokio elemento sukurti funkcija
+//cia yra iskvieciama mygtuko onclick veiksmas
+/*
+  let secondBtn = document.querySelector('#second-btn')
+  secondBtn.innerText = 'kitas mygtukas';
+  let myH12 = document.createElement('h1');
+  myH12.textContent = 'Sveiki';
+  document.body.appendChild(myH12)
+  secondBtn.onclick = function(){
+   console.log('Button was Clicked')
+  }
+  myH12.onclick = function(){
+    console.log('Button was clicked')
+  }
+*/
+  //--- wasMouseOnButton --- eventas ---
+// cia mygtukas reaguoja tiesiog uzejus ant jo
+//apsirasom taip
+/*
+  function wasMouseOnButton() {
+    console.log('Mouse was over the button');
+  }
+  secondBtn.onmouseover = wasMouseOnButton;
+*/
+  // visas sarasas event handleriu - https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers
+
+  //visus situs eventus galim deti ant bet kurio kito elemento
+  //jie nera apriboti vien tik mygtuku (button)
+
+  // addEventListener - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+
+  //<<< uzduotis >>>
+//isideti 2 button i HTML
+//issisaugoti elementa i kintamaji selektinant su querySelector
+//vienam reikes funkcijos kuri isspausdins sveiki
+//kitam - viso geresnio
+//panaudoti addEventListener('click', ...) pirmam mygtukui
+//onclick antram
+/*
+function firstClick(){
+  console.log('First button was pressed')
+}
+function secondClick(){
+  console.log('Second button was pressed')
+}
+
+let firstBtn = document.createElement('button');
+firstBtn.textContent = 'Pirmas'
+document.body.appendChild(firstBtn);
+
+// pirmas budas
+//firstBtn.addEventListener('click', firstClick)
+
+//antras budas
+//firstBtn.addEventListener('click', function(){
+ // console.log('First buton was pressed')
+//})
+
+//trecias budas
+firstBtn.addEventListener('click', () => console.log('First button was pressed'))
+
+let secondBtn = document.createElement('button')
+  secondBtn.textContent = 'Antras';
+  document.body.appendChild(secondBtn);
+secondBtn.onclick = secondClick
+*/
+
+//<<< uzduotis >>>
+//sukurti puslapi su mygtuku,kuri paspaudus pasikeistu
+//puslapio background spalva, kuri kas kart sugeneruos atsitiktine tvarka
+//naudosime RGB color
+
+//1. Susikurti mygtuka + tekstas mygtukui + pridedam i body
+//2. Apsirasyti funkcija kuri suras random spalva
+//2.1 reiks triju kintamuju, su random sugeneruotais skaiciais 0 - 255 / Math metodai
+//2.2 kintamuosius turime perduoti i spalva rgb(x,y,z)
+//2.3 dedam spalva ant body / inline stilius
+//3. susikuriam event listeneri onClick arba addEventListener
+/*
+let myCollorButton = document.createElement('button');
+myCollorButton.innerText = 'Keisti spalva';
+document.body.appendChild(myCollorButton);
+
+function sukurtiNaujaSpalva(){
+  let red = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  document.body.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`
+}
+
+//vienas varijantas
+//myCollorButton.onclick = sukurtiNaujaSpalva;
+
+//kitas varijantas naudojant addEventListener,tarp kitko,jis bus naudojamas dazniau
+myCollorButton.addEventListener('click', sukurtiNaujaSpalva)
+*/
+
+// <<<< uzduotis >>>>
+// susikuriam apie 10 mygtuku html faile, tiesiogiai html'e
+// pasiselektinam juos visus
+// visiem jiem uzdedame event listeneri, kuriame kviesime gerRandomColor funkcija
+
+//pradzia naudojam is ankstesnes uzduoties
+/*
+function sukurtiNaujaSpalva(){
+  let red = Math.floor(Math.random() * 256);
+  let blue = Math.floor(Math.random() * 256);
+  let green = Math.floor(Math.random() * 256);
+  document.body.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`
+}
+//pasiimam visus mygtukus esancius HTML faile
+
+let buttons = document.querySelectorAll('button')
+buttons.forEach(item => item.addEventListener('click', sukurtiNaujaSpalva))
+*/
+//kitas varijantas
+/*
+function loopTroughArray(buttons){
+  buttons.forEach(item => item.onclick = sukurtiNaujaSpalva);
+}
+loopTroughArray(buttons)*/
+
+// ----- MyInput --------------
+/*
+let myInput = document.querySelector('input')
+myInput.addEventListener('keyup', function(event){
+  console.log(event)
+})
+*/
+// ----- EventObject ----------
+//tokios validacijos naudojamos tam,kad susirinkti is tam tikro lauko reiksmes
+/*
+myInput.addEventListener('keydown', function(event){
+  console.log(event.key)
+  console.log(event.code)
+})*/
+
+

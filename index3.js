@@ -1,3 +1,4 @@
+console.log('Nuo cia viskas is JS trecio failo')
 window.onload = function() {
   let grizedarbai = JSON.parse(localStorage.getItem('darbai'));
   console.log(grizedarbai)

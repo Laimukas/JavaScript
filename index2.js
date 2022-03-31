@@ -1,4 +1,4 @@
-console.log('Nuo cia viskas is JS antro failo')
+console.log('JS antras failas')
 
 //--------------- THIS ----------------
 

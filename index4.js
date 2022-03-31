@@ -1,4 +1,4 @@
-console.log('Nuo cia viskas is JS ketvirto failo')
+console.log('JS ketvirtas failas')
 // kad nesimaisytu su To Do List , susikuriau nauja JS faila
 
 // stringu masyvams naudojami metodai

@@ -1,5 +1,5 @@
 // skaiciai
-console.log('Nuo cia viskas is JS pirmo failo')
+console.log('JS pirmas failas')
 /*
 let skaicius = 5
 let kitasSkaicius = 7

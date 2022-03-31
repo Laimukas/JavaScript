@@ -1,4 +1,4 @@
-console.log('Nuo cia viskas is JS trecio failo')
+console.log('JS trecias failas')
 window.onload = function() {
   let grizedarbai = JSON.parse(localStorage.getItem('darbai'));
   console.log(grizedarbai)

@@ -1,3 +1,3 @@
-# JavaScript
-* JS basics
-* Some Examples
+## JavaScript
+- JS basics
+- Some Examples

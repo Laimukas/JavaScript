@@ -11,32 +11,24 @@
     <title>JavaScript</title>
 </head>
 <body>
-    
-    <div class="container">
-        <h1>My todo list</h1>
-        <div class="add-block">
-            <input type="text">
-            <button>Add New</button>
-        </div>
-        <ul>
-            <li>First dummy task</li>
-            <li>Second dummy task</li>
-        </ul>
+  
+  <div class="container">
+    <h1>My todo list</h1>
+    <div class="add-block">
+      <input class="my-input" type="text">
+      <button>+</button>
     </div>
-
-    <div class="container">
-        <h1>My todo list</h1>
-        <div class="add-blovk">
-          <input class="my-input" type="text">
-          <button>+</button>
-        </div>
-        <ul>
-        </ul>
-      </div>
+  
+  <label class="progress-label" for="file">0 of 0</label>
+  
+  <progress id="file" max="100" value="0"></progress>
+    <button id="all">Remove completed</button>
+  </div>
 
     <script src="./index.js"></script>
     <script src="./index2.js"></script>
     <script src="./index3.js"></script>
+    <script src="./index4.js"></script>
 
 </body>
 </html>

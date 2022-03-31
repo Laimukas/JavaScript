@@ -67,7 +67,6 @@ let newHello = oldSyntax.kitas
 //--------------- Calbacks --------------------
 //https://www.w3schools.com/jsref/jsref_obj_array.asp
 /*const randomNumbers = [1, 22, 543, 2, 6, 12, 55, 86, 6, 9, 12, 31, 51, 92, 3]
-
 function print(element){
     console.log(element)
 }
@@ -131,7 +130,6 @@ const knygosApieProgramavima = [
 function papildytiVertinima(knyga){
     console.log(knyga.goodReadsRating = `"${knyga.title}" knygos vertinimas ${knyga.goodReadsRating} is 5`) 
 }
-
 knygosApieProgramavima.forEach(papildytiVertinima)
 */
 
@@ -162,9 +160,7 @@ function grazintiPavadinima(knyga) {
   // )
   // funkcija grazina item.title --> "The Pragmatic Programmer"
   // ["The Pragmatic Programmer" ]
-
   // antras ratas ["The Pragmatic Programmer", "Clean Code"]
-
    const knygupavadinimai = knygosApieProgramavima.map(grazintiPavadinima)
    // pirmo callo metu grazintiPavadinima[knygosApieProgramavima[0]]
   console.log(knygupavadinimai)*/
@@ -189,15 +185,12 @@ console.log(geriausiaiIvertintosKnygos)*/
 // naujas budas kaip galime aprasyti funkcijas
 /*
 const skaiciai3 = [1, 2, 3, 4, 5, 6, 7, 7, 8, 8];
-
 let newSkaic = skaiciai3.map(num => {
     return num ** 2
 });
-
 newSkaic = skaiciai3.map(function(num){
     return num ** 2
 })
-
 function squared(num){
     return num ** 2
 }
@@ -218,15 +211,12 @@ console.log(bookNamesArr)*/
 function add(a,b){
    return a + b
 }
-
 const add2 = (a,b) => {
    return a + b
 }
-
 const add3 = (a, b) => (
     a + b
 )// tie skliaustai nieko nenurodo,tas pats kaip be ju butu
-
 const add4 = (a, b) => a + b // cia tuo labiau kaip ankstesniam pavyzdi
 */
 
@@ -250,10 +240,8 @@ const add4 = (a, b) => a + b // cia tuo labiau kaip ankstesniam pavyzdi
 //pvz
 /*let myHeaderTag = document.getElementById('my-h1');
 console.log(myHeaderTag)
-
 getElementByTagName
 console.log(document.getElementsByTagName('p4'));
-
 document.getElementsByTagName('img')*/
 //grazina html kolekcija (masyva su html elementais - ju JS reprezentacijomis)
 //cia negalesime naudoti masyvu metodu, kadangi tai nera standartinis masyvas
@@ -404,7 +392,6 @@ console.log(allNumbers)*/
 /*
 const firstArrayAnimals = ["dog", "cat", "parrot"];
 const secondArrayAnimals = ["lizard", "rat", "cat"];
-
 const machingAnimals = firstArrayAnimals.filter(element => secondArrayAnimals.includes(element));
 //filter grazina viska kas issivercia i true reiksme
 //includes ir grazina true arba false
@@ -495,13 +482,11 @@ document.body.appendChild(myNewH3)
 */
 /*
 const myUl = document.createElement('ul');
-
 function addListItemsToUl(arr) {
   // step 1 pereiti per visus masyvo elementus  
   // step 2 susikurti kiekvienam elementui nauja li
   // step 3 i li innerText prisideti darba is masyvo
   // step 4 kiekviena pilno li su tekstu prideti i ul
-
   arr.forEach(item => {
     let li = document.createElement('li');
     li.innerText = item;
@@ -656,7 +641,6 @@ let duomenysIsDB = [
 
 /*
 const mainContainer = document.createElement('div');
-
 function createSingleCard(arr) {
 // step 1 pereiti per visus arr elementus
 arr.forEach(element => {
@@ -693,20 +677,17 @@ cardDiv.appendChild(cardP);
 cardDiv.appendChild(cardA);
 mainContainer.appendChild(cardDiv);
 mainContainer.classList.add('container')
-
 },
 document.body.appendChild(mainContainer)
  // viska sudedame i mainCintainer 
 );
 }
-
 createSingleCard(duomenysIsDB)
 */
 //varijantas numeris 2 kaip apsirasyti sia uzduoti
 /*
 function createSingleCard(arr) {
   arr.forEach(element => {
-
   let newCard = `
     <div class="card">
       <img class="photo" src="${element.photo}" alt="Profile pciture"> 
@@ -778,22 +759,17 @@ function firstClick(){
 function secondClick(){
   console.log('Second button was pressed')
 }
-
 let firstBtn = document.createElement('button');
 firstBtn.textContent = 'Pirmas'
 document.body.appendChild(firstBtn);
-
 // pirmas budas
 //firstBtn.addEventListener('click', firstClick)
-
 //antras budas
 //firstBtn.addEventListener('click', function(){
  // console.log('First buton was pressed')
 //})
-
 //trecias budas
 firstBtn.addEventListener('click', () => console.log('First button was pressed'))
-
 let secondBtn = document.createElement('button')
   secondBtn.textContent = 'Antras';
   document.body.appendChild(secondBtn);
@@ -815,17 +791,14 @@ secondBtn.onclick = secondClick
 let myCollorButton = document.createElement('button');
 myCollorButton.innerText = 'Keisti spalva';
 document.body.appendChild(myCollorButton);
-
 function sukurtiNaujaSpalva(){
   let red = Math.floor(Math.random() * 256);
   let blue = Math.floor(Math.random() * 256);
   let green = Math.floor(Math.random() * 256);
   document.body.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`
 }
-
 //vienas varijantas
 //myCollorButton.onclick = sukurtiNaujaSpalva;
-
 //kitas varijantas naudojant addEventListener,tarp kitko,jis bus naudojamas dazniau
 myCollorButton.addEventListener('click', sukurtiNaujaSpalva)
 */
@@ -844,7 +817,6 @@ function sukurtiNaujaSpalva(){
   document.body.style.backgroundColor = `rgb(${red}, ${blue}, ${green})`
 }
 //pasiimam visus mygtukus esancius HTML faile
-
 let buttons = document.querySelectorAll('button')
 buttons.forEach(item => item.addEventListener('click', sukurtiNaujaSpalva))
 */
@@ -869,5 +841,3 @@ myInput.addEventListener('keydown', function(event){
   console.log(event.key)
   console.log(event.code)
 })*/
-
-

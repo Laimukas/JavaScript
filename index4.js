@@ -167,5 +167,3 @@ else{
 }
 console.log(letsPlay('popierius', 'popierius'))
 */
-
-//<<< uzduotis >>>
